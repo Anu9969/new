@@ -3,43 +3,43 @@ import net from './../assets/images/net.png';
 import {
     HiMagnifyingGlass,
     HiStar,
-   
+    HiPlayCycle,
     HiTv
-} from 'react-icons/hi2';
+} from 'react-icons/hi';
+import Headertitems from './Headertitems';
 
-
-function Header() {
-    const menu = [
+function header() {
+    const menu =[
         {
-            name: 'Home',
-            icon: HiMagnifyingGlass
+            name:'Home',
+            icon:HiHome
         },
         {
-            name: 'Search',
-            icon: HiStar
-        },
-        // {
-        //     name: 'Watchlist',
-        //     icon: HiPlayCycle
-        // },
-        {
-            name: 'Originals',
-            icon: HiTv
+            name:'Search',
+            icon:HiMagnifyingGlass
         },
         {
-            name: 'Movies',
-            icon: HiTv
+            name:'Watchlist',
+            icon:HiStar
+        },
+        {
+            name:'Originals',
+            icon:HiPlayCycle
+        },
+        {
+            name:'Movies',
+            icon:HiTv
         }
-    ];
-
-    return (
-        <div>
-            <img src={net} className='w-80px md:w-115px object-cover' alt="Netflix Logo" />
-            {menu.map((item, index) => (
-                <HeaderItems key={index} name={item.name} icon={item.icon} />
-            ))}
-        </div>
-    );
+    ]
+  return (
+ <div>
+       <img src="{net}" className='w-{80px} md:w-{115px} object' />
+    {menu.map((item)=>(
+       <Headertitems/>
+    ))}
+ </div>
+)
+  
 }
 
-export default Header;
+export default header  
